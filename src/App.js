@@ -20,7 +20,7 @@ export default function App() {
 
 	return (
 		<>
-			<Header />
+			<Header userName='John Doe' />
 			<main className={styles.container}>
 				<Menu />
 				<div className={styles.wrapper}>
