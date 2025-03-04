@@ -12,6 +12,8 @@ export default function App() {
 	const [balance, setBalance] = useState(1000)
 	const [transactions, setTransactions] = useState([])
 
+	const userName = 'John Doe'
+
 	function performTransaction(values) {
 		const newBalance = calculateNewBalance(values, balance)
 		setBalance(newBalance)
@@ -20,11 +22,11 @@ export default function App() {
 
 	return (
 		<>
-			<Header userName='John Doe' />
+			<Header userName={userName} />
 			<main className={styles.container}>
 				<Menu />
 				<div className={styles.wrapper}>
-					<Home balance={balance} />
+					<Home balance={balance} userName={userName} />
 					<Transaction performTransaction={performTransaction} />
 				</div>
 				<Statement transactions={transactions} />

@@ -36,7 +36,7 @@
 }
 
 .upperDetail {
-	background-image: url(./detalhe-sup.svg);
+	background-image: url(./upper-detail.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
@@ -47,7 +47,7 @@
 }
 
 .lowerDetail {
-	background-image: url(./detalhe-inf.svg);
+	background-image: url(./lower-detail.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
