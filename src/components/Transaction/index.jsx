@@ -10,7 +10,7 @@ export default function Transaction({ performTransaction }) {
 			<div className={styles.wrapper}>
 				<Form performTransaction={performTransaction} />
 			</div>
-			<Ilustration height="229" width="359" />
+			<Ilustration height='229' width='359' />
 			<div className={styles.lowerDetail} />
 		</section>
 	)

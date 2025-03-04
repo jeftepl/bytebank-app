@@ -8,9 +8,7 @@ export default function Statement({ transactions }) {
 			<h2 className={styles.title}>Extrato</h2>
 			<ul className={styles.list}>
 				{transactions.map((transaction, index) => {
-					return (
-						<Transaction key={index} transaction={transaction} />
-					)
+					return <Transaction key={index} transaction={transaction} />
 				})}
 			</ul>
 		</section>

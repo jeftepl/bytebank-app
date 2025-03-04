@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './Balance.module.css';
-import { ReactComponent as Icon } from './eye.svg';
+import React from 'react'
+import styles from './Balance.module.css'
+import { ReactComponent as Icon } from './eye.svg'
 
 export default function Balance({ balance }) {
 	return (
@@ -13,5 +13,5 @@ export default function Balance({ balance }) {
 			<p className={styles.account}>Account</p>
 			<p className={styles.value}>{`R$ ${balance}`}</p>
 		</div>
-	);
+	)
 }

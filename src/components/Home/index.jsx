@@ -16,7 +16,7 @@ export default function Home({ saldo }) {
 				'en-US',
 			)}`}</p>
 			<div className={styles.wrapper}>
-				<Ilustration className={styles.illustration} width="230" height="185" />
+				<Ilustration className={styles.illustration} width='230' height='185' />
 				<Saldo saldo={saldo} />
 			</div>
 			<div className={styles.lowerDetail} />

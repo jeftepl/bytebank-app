@@ -30,26 +30,26 @@ export default function Form({ performTransaction }) {
 			<select
 				className={styles.optionsGroup}
 				onChange={handleChange}
-				name="transaction"
-				data-testid="select-options"
+				name='transaction'
+				data-testid='select-options'
 			>
-				<option defaultValue="Select a transaction type">Select a transaction type</option>
-				<option value="Deposit">Deposit</option>
-				<option value="Transfer">Transfer</option>
+				<option defaultValue='Select a transaction type'>Select a transaction type</option>
+				<option value='Deposit'>Deposit</option>
+				<option value='Transfer'>Transfer</option>
 			</select>
-			<label htmlFor="value" className={styles.valueLegend}>
+			<label htmlFor='value' className={styles.valueLegend}>
 				Value
 			</label>
 			<input
 				onChange={handleChange}
 				className={styles.valueField}
-				type="number"
+				type='number'
 				value={value.value}
-				name="value"
-				id="value"
-				placeholder="Enter a value"
+				name='value'
+				id='value'
+				placeholder='Enter a value'
 			/>
-			<button className={styles.button} type="submit">
+			<button className={styles.button} type='submit'>
 				Perform transaction
 			</button>
 		</form>
