@@ -4,14 +4,14 @@ import styles from './Transaction.module.css'
 
 test('Should render transaction type and value with updated props', () => {
 	const transaction = {
-		type: 'Transaction',
+		type: 'Transfer',
 		value: 100
 	}
 	const { rerender } = render(<Transaction transaction={transaction} styles={styles} />)
 	const transactionType = screen.getByTestId('transactionType')
 	const transactionValue = screen.getByTestId('transactionValue')
 
-	expect(transactionType).toHaveTextContent('Transaction')
+	expect(transactionType).toHaveTextContent('Transfer')
 	expect(transactionValue).toHaveTextContent('- $ 100')
 
 	const newTransaction = {

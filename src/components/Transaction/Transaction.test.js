@@ -24,7 +24,7 @@ describe('Transaction', () => {
 		const select = screen.getByTestId('select-options')
 		expect(select).toBeInTheDocument()
 
-		expect(select).toHaveValue('Select a transaction type')
+		expect(select).toHaveTextContent('Select a transaction type')
 
 		userEvent.selectOptions(select, 'Deposit')
 
@@ -39,7 +39,7 @@ describe('Transaction', () => {
 		const select = screen.getByTestId('select-options')
 		expect(select).toBeInTheDocument()
 
-		expect(select).toHaveValue('Select a transaction type')
+		expect(select).toHaveTextContent('Select a transaction type')
 
 		userEvent.selectOptions(select, 'Transfer')
 

@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import styles from './Form.module.css'
 
 export default function Form({ performTransaction }) {
-	const [value, setValue] = useState({ transaction: '', value: '' })
+	const [value, setValue] = useState({ type: '', value: '' })
 
 	function handleChange(e) {
-		const { name, value } = e.target
-		const updatedValues = { ...value, [name]: value }
+		const { name, value: inputValue } = e.target
+		const updatedValues = { ...value, [name]: inputValue }
 		setValue(updatedValues)
 	}
 
@@ -14,12 +14,12 @@ export default function Form({ performTransaction }) {
 		e.preventDefault()
 		const dataTransaction = new Date().toLocaleDateString('en-US')
 		const monthTransaction = new Date().toLocaleDateString('en-US', {
-			month: 'long',
+			month: 'long'
 		})
 		performTransaction({
 			...value,
-			data: dataTransaction,
-			mes: monthTransaction[0].toUpperCase() + monthTransaction.substring(1),
+			date: dataTransaction,
+			month: monthTransaction[0].toUpperCase() + monthTransaction.substring(1)
 		})
 		setValue({ ...value, value: '' })
 	}
@@ -30,10 +30,12 @@ export default function Form({ performTransaction }) {
 			<select
 				className={styles.optionsGroup}
 				onChange={handleChange}
-				name='transaction'
+				name='type'
 				data-testid='select-options'
+				required
+				defaultValue='Select a transaction type'
 			>
-				<option defaultValue='Select a transaction type'>Select a transaction type</option>
+				<option value=''>Select a transaction type</option>
 				<option value='Deposit'>Deposit</option>
 				<option value='Transfer'>Transfer</option>
 			</select>
@@ -48,9 +50,10 @@ export default function Form({ performTransaction }) {
 				name='value'
 				id='value'
 				placeholder='Enter a value'
+				required
 			/>
 			<button className={styles.button} type='submit'>
-				Perform transaction
+				Add transaction
 			</button>
 		</form>
 	)

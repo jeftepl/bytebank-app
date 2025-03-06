@@ -16,6 +16,7 @@ export default function App() {
 
 	function performTransaction(values) {
 		const newBalance = calculateNewBalance(values, balance)
+		console.log(newBalance)
 		setBalance(newBalance)
 		setTransactions([...transactions, values])
 	}
