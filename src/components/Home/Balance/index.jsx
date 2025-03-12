@@ -11,7 +11,7 @@ export default function Balance({ balance }) {
 			</div>
 			<div className={styles.divider} />
 			<p className={styles.account}>Account</p>
-			<p className={styles.value}>{`$ ${balance}`}</p>
+			<p data-testid='balance-value' className={styles.value}>{`$ ${balance}`}</p>
 		</div>
 	)
 }
