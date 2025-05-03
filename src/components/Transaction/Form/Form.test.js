@@ -29,4 +29,13 @@ describe('Transaction Form', () => {
 		userEvent.click(button)
 		expect(performTransaction).toHaveBeenCalledTimes(1)
 	})
+
+	it('should render a select transction type option', () => {
+		render(<Form />)
+		const select = screen.getByRole('combobox')
+		userEvent.selectOptions(select, 'Deposit')
+
+		expect(screen.getByRole('option', { name: 'Select a transaction type' }).selected).toBe(false)
+		expect(screen.getByRole('option', { name: 'Deposit' }).selected).toBe(true)
+	})
 })
